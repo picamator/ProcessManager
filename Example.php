@@ -5,13 +5,15 @@
  * =====================================
  */
 
+namespace ProcessManager;
+
 // ProcessManager Autoload
-require_once ('./Autoload.php');
+require_once ('./src/Autoload.php');
 
 /**
  * Lets we have process
  */
-class ExampleProcess implements \ProcessManager\Process\ProcessInterface 
+class ExampleProcess implements Process\ProcessInterface 
 {
     private $iteration = 1;
     
@@ -29,7 +31,7 @@ $time = microtime(true);
 $process = new ExampleProcess();
 
 // 3. Create Manager
-$manager = new \ProcessManager\Manager;
+$manager = new Manager();
 
 // 4. Start Process
 $manager->setTime($time)

@@ -9,10 +9,8 @@
 namespace ProcessManager;
 
 function Autoload($class)
-{
-    $class = str_replace(__NAMESPACE__, '.', $class);
-    
+{    
     include_once (str_replace('\\', DIRECTORY_SEPARATOR, $class).'.php');
 }
 
-spl_autoload_register('ProcessManager\Autoload');
+spl_autoload_register(__NAMESPACE__.'\Autoload');
