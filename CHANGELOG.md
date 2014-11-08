@@ -1,5 +1,8 @@
 CHANGELOG
 =========
+v1.1.1 (2014-11-08)
+* Moved example to readme
+
 v1.1.0 (2014-01-06)
 -------------------
 * Updated Autoload
